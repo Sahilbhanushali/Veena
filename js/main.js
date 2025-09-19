@@ -418,45 +418,45 @@ $(function () {
     var counter = initShow;
     var iso = $container.data('isotope');
 
-    if (iso !== undefined) {
-        loadMore(initShow);
-    }
+    // if (iso !== undefined) {
+    //     loadMore(initShow);
+    // }
 
-    function loadMore(toShow) {
+    // function loadMore(toShow) {
 
-        $container.find(".mil-hidden").removeClass("mil-hidden");
+    //     $container.find(".mil-hidden").removeClass("mil-hidden");
 
-        var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function (item) {
-            return item.element;
-        });
-        $(hiddenElems).addClass('mil-hidden');
-        $container.isotope('layout');
+    //     var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function (item) {
+    //         return item.element;
+    //     });
+    //     $(hiddenElems).addClass('mil-hidden');
+    //     $container.isotope('layout');
 
-        if (hiddenElems.length == 0) {
-            $("#load-more").hide();
-        } else {
-            $("#load-more").show();
-        };
+    //     if (hiddenElems.length == 0) {
+    //         $("#load-more").hide();
+    //     } else {
+    //         $("#load-more").show();
+    //     };
 
-    }
+    // }
 
-    $container.after('<div class="mil-load-more mil-up"><button id="load-more">Load More</button></div>');
+    // $container.after('<div class="mil-load-more mil-up"><button id="load-more">Load More</button></div>');
 
-    $("#load-more").on('click', function () {
+    // $("#load-more").on('click', function () {
 
-        if ($('#filters').data('clicked')) {
-            counter = initShow;
-            j$('#filters').data('clicked', false);
-        } else {
-            counter = counter;
-        };
+    //     if ($('#filters').data('clicked')) {
+    //         counter = initShow;
+    //         j$('#filters').data('clicked', false);
+    //     } else {
+    //         counter = counter;
+    //     };
 
-        counter = counter + initShow;
+    //     counter = counter + initShow;
 
-        loadMore(counter);
+    //     loadMore(counter);
 
-        ScrollTrigger.refresh();
-    });
+    //     ScrollTrigger.refresh();
+    // });
 
     /***************************
 
@@ -577,14 +577,15 @@ $(function () {
 				$.ajax({
 					url: 'mailer/feedback.php',
 					type: 'post',
-					dataType: 'json',
-					data: 'name='+ $("#cform").find('input[name="name"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&tel='+ $("#cform").find('input[name="tel"]').val() + '&budget='+ $("#cform").find('input[name="budget"]').val() + '&message='+ $("#cform").find('textarea[name="message"]').val(),
-					beforeSend: function() {
-	
-					},
-					complete: function() {
-	
-					},
+					contentType: 'application/json',
+					 data: JSON.stringify({
+                    name: $("#cform").find('input[name="name"]').val(),
+                    email: $("#cform").find('input[name="email"]').val(),
+                    tel: $("#cform").find('input[name="tel"]').val(),
+                    budget: $("#cform").find('input[name="budget"]').val(),
+                    message: $("#cform").find('textarea[name="message"]').val(),
+                }),
+				
 					success: function(data) {
 						$('#cform').fadeOut();
 						$('.alert-success').delay(1000).fadeIn();
