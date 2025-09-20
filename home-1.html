@@ -19,6 +19,33 @@
     <title>
       Veena 10 kaa dum by Niilkanth | Vapi's Most Powerful Lake-Facing Homes
     </title>
+    <style>
+      /* Smooth scrolling for navigation */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Active navigation state */
+      .mil-navigation nav ul li a.active {
+        color: #c8a97e; /* Gold accent color */
+        position: relative;
+      }
+
+      .mil-navigation nav ul li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #c8a97e;
+      }
+
+      /* Section spacing for better navigation */
+      section {
+        scroll-margin-top: 100px;
+      }
+    </style>
   </head>
 
   <body>
@@ -43,19 +70,14 @@
             <div class="mil-navigation">
               <nav>
                 <ul>
-                  <li class="mil-active">
-                    <a href="home-1.html">Home</a>
+                  <li class="mil">
+                    <a href="#home" class="active">Home</a>
                   </li>
-                  <li><a href="about.html">About</a></li>
-                  <li class="mil-has-children">
-                    <a href="portfolio.html">Projects</a>
-                    <ul>
-                      <li><a href="portfolio.html">Projects list</a></li>
-                      <li><a href="project.html">Single Project</a></li>
-                    </ul>
-                  </li>
-
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#location">location</a></li>
+                  <li><a href="#amenities">Amenities</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
                 </ul>
               </nav>
             </div>
@@ -74,7 +96,7 @@
       <!-- content -->
       <div id="content">
         <!-- banner -->
-        <section class="mil-banner">
+        <section class="mil-banner" id="home">
           <img
             src="img/photo/1.jpg"
             class="mil-bg-img mil-scale"
@@ -106,6 +128,88 @@
         </section>
         <!-- banner end -->
 
+        <section id="about">
+          <div class="container mil-p-120-30">
+            <div class="mil-background-grid mil-softened"></div>
+            <div class="row">
+              <div class="col-12">
+                <div class="mil-mb-90">
+                  <h2 class="mil-upper mil-up mil-mb-30">
+                    Your Kingdom Awaits. By the Lake
+                  </h2>
+                  <p class="mil-up" style="font-size: 17px; line-height: 1.8">
+                    Veena 10 Kaa Dum is strategically located in one of Vapi’s
+                    most desirable neighborhoods, offering seamless connectivity
+                    to key business hubs, schools, healthcare, and entertainment
+                    zones. Nestled beside a peaceful lake, it provides a rare
+                    combination of natural serenity and urban convenience. This
+                    location ensures long term value appreciation while offering
+                    residents a high quality lifestyle. With excellent
+                    infrastructure, superior design, and prime accessibility,
+                    Veena 10 Kaa Dum isn’t just a home it’s a future proof
+                    investment where peace of mind and growth potential go hand
+                    in hand
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="location">
+          <div class="container mil-p-120">
+            <div class="mil-background-grid mil-softened"></div>
+            <div class="row">
+              <div class="col-12">
+                <div class="mil-mb-90">
+                  <h2 class="mil-upper mil-up mil-mb-30">Strategic Location</h2>
+                  <p class="mil-up">
+                    Experience the perfect balance of tranquility and
+                    connectivity at Veena 10 Kaa Dum.
+                  </p>
+                </div>
+              </div>
+              <div class="mil-map-frame mil-up mil-mb-90">
+                <div class="mil-map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29927.219260362872!2d72.93415885512897!3d20.34564996248043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cf004b92165f%3A0xe672e1c0016d5da1!2sNiilkanth%20Veena!5e0!3m2!1sen!2sin!4v1758269451475!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="mil-up mil-mb-60">
+                  <h4 class="mil-upper mil-mb-30">View</h4>
+                  <p class="mil-mb-30">
+                    Direct access to stunning lakefront vistas.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="mil-up mil-mb-60">
+                  <h4 class="mil-upper mil-mb-30">Connectivity</h4>
+                  <p class="mil-mb-30">
+                    Seconds away from major roads, minutes from the city center.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="mil-up mil-mb-60">
+                  <h4 class="mil-upper mil-mb-30">Convenience</h4>
+                  <p class="mil-mb-30">
+                    Top tier schools, hospitals, and shopping zones are just
+                    around the corner.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- services -->
         <section class="mil-soft-bg mil-relative">
           <img src="img/other/bg.svg" class="mil-bg-img" alt="image" />
@@ -119,220 +223,538 @@
                   </h2>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <a
-                  href="service.html"
-                  class="mil-service-card mil-up mil-mb-30"
-                >
-                  <div class="mil-card-number">01.</div>
-                  <div class="mil-center">
-                    <h4 class="mil-upper mil-mb-20">UNMATCHED VIEWS</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p class="mil-service-text">
-                      Wake up to stunning, serene lake views every single day.
-                      Your private escape from the city's chaos.
-                    </p>
+              <section>
+                <div class="container mil-p-0-120">
+                  <div class="mil-background-grid mil-softened"></div>
+                  <div class="mil-contact-frame mil-up">
+                    <div class="row justify-content-between align-items-center">
+                      <div class="col-lg-4 mil-mb-30">
+                        <p class="mil-dark mil-up mil-mb-10">Email address</p>
+                        <h4 class="mil-thin mil-up">projects@ruizarch.com</h4>
+                      </div>
+                      <div class="col-lg-4 mil-mb-30">
+                        <p class="mil-dark mil-up mil-mb-10">
+                          Free Consultation
+                        </p>
+                        <h4 class="mil-thin mil-up">1 800 847 7978</h4>
+                      </div>
+                      <div class="col-lg-3 mil-mb-30">
+                        <a href="#contact" class="mil-button mil-up mil-fw"
+                          >Find a Space</a
+                        >
+                      </div>
+                    </div>
                   </div>
-                </a>
-              </div>
-              <div class="col-lg-4">
-                <a
-                  href="service.html"
-                  class="mil-service-card mil-up mil-mb-30"
-                >
-                  <div class="mil-card-number">02.</div>
-                  <div class="mil-center">
-                    <h4 class="mil-upper mil-mb-20">UNLIMITED LIFESTYLE</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p class="mil-service-text">
-                      Powered by 10 world class amenities, this isn't just a
-                      home it's a lifestyle statement.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4">
-                <a
-                  href="service.html"
-                  class="mil-service-card mil-up mil-mb-30"
-                >
-                  <div class="mil-card-number">03.</div>
-                  <div class="mil-center">
-                    <h4 class="mil-upper mil-mb-20">UNBEATABLE SPACE</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p class="mil-service-text">
-                      Experience true luxury with the largest and most spacious
-                      room sizes in Vapi. More room for life, more room for you
-                    </p>
-                  </div>
-                </a>
-              </div>
+                </div>
+              </section>
             </div>
           </div>
         </section>
         <!-- services end -->
-
-        <!-- advantages -->
-        <section>
-          <div class="container mil-p-120-60">
+        <!-- portfolio -->
+        <section id="amenities">
+          <div class="container mil-p-0-30">
             <div class="mil-background-grid mil-softened"></div>
-
-            <div class="row">
-              <div class="col-12">
-                <div class="mil-center mil-mb-90">
+            <div
+              class="row justify-content-between align-items-center flex-sm-row-reverse"
+            >
+              <div class="col-lg-5">
+                <div class="mil-mb-90">
                   <span class="mil-suptitle mil-upper mil-up mil-mb-30"
-                    >The Power of 10: A Lifestyle Revolution in Vapi
+                    >Amenities with DUM
                   </span>
                   <h2 class="mil-upper mil-up mil-mb-30">
-                    Veena 10 kaa dum is not just a project<br />
-                    it's a declaration
+                    A Power Packed Lifestyle is Not an Option. It's a Guarantee
                   </h2>
-                  <p class="mil-up">
-                    A declaration of power, space, and unmatched luxury. We've
-                    harnessed the "Power of 10" to create a living experience
-                    that is truly explosive. <br />
-                    Ten pillars of excellence combine to offer Vapi a new
-                    landmark where every home is a testament to grandeur and
-                    every view is a masterpiece
+                  <p class="mil-up mil-mb-40">
+                    We didn't just add amenities; we injected them with power.
+                    Each facility at Veena 10 kaa dum is designed to be a
+                    statement of a grand, effortless life
                   </p>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-6">
-                <div
-                  class="mil-advantage mil-icon-box mil-center mil-up mil-mb-60"
-                >
-                  <h4 class="mil-upper mil-mb-30">Ten Times the Luxury</h4>
-                  <div class="mil-icon mil-icon-border mil-mb-30">
-                    <img src="img/icons/6.svg" alt="icon" />
+              <div class="col-lg-6">
+                <div class="mil-illustration-slider-frame mil-up mil-mb-90">
+                  <div class="swiper-container mil-illustration-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div
+                          class="mil-illustration"
+                          data-swiper-parallax-x="50"
+                          data-swiper-parallax-scale="1.3"
+                        >
+                          <div class="mil-image-frame">
+                            <img
+                              src="img/photo/8.jpg"
+                              alt="Veena 10 Kaa Dum Amenity"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div
+                          class="mil-illustration"
+                          data-swiper-parallax-x="50"
+                          data-swiper-parallax-scale="1.3"
+                        >
+                          <div class="mil-image-frame">
+                            <img
+                              src="img/photo/7.jpg"
+                              alt="Veena 10 Kaa Dum Facility"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div
+                          class="mil-illustration"
+                          data-swiper-parallax-x="50"
+                          data-swiper-parallax-scale="1.3"
+                        >
+                          <div class="mil-image-frame">
+                            <img
+                              src="img/photo/1.jpg"
+                              alt="Veena 10 Kaa Dum Interior"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p>
-                    From a fortress like Grand Entrance with 24x7 Security to a
-                    state of the art Gym and serene Landscaped Gardens
-                  </p>
+                  <div class="mil-illustration-slider-nav mil-up">
+                    <div class="mil-nav-buttons">
+                      <div class="mil-slider-button mil-illustration-prev">
+                        Prev
+                      </div>
+                      <div class="mil-slider-button mil-illustration-next">
+                        Next
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <div
-                  class="mil-advantage mil-icon-box mil-center mil-up mil-mb-60"
-                >
-                  <h4 class="mil-upper mil-mb-30">Ten Times the Life</h4>
-                  <div class="mil-icon mil-icon-border mil-mb-30">
-                    <img src="img/icons/6.svg" alt="icon" />
-                  </div>
-                  <p>
-                    We've amplified every amenity this is the full-power
-                    lifestyle you deserve.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- advantages end -->
-
-        <!-- portfolio -->
-        <section>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 col-lg-3">
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-square-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/1.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Modern architecture</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-square-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/2.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Ice castle</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-long-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/3.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Cubism</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-square-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/4.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Horizontal elevator</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-square-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/5.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Home Decor</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a
-                  href="project.html"
-                  class="mil-portfolio-item mil-long-item mil-up mil-mb-30"
-                >
-                  <img src="img/covers/6.jpg" alt="cover" />
-                  <div class="mil-project-descr">
-                    <h4 class="mil-upper mil-mb-20">Modern architecture</h4>
-                    <div class="mil-divider-sm mil-mb-20"></div>
-                    <p>
-                      Consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore aliqua.
-                    </p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
         </section>
         <!-- portfolio end -->
 
+        <!-- process -->
+        <section class="mil-relative">
+          <div class="container mil-p-0-60">
+            <div class="mil-background-grid mil-softened"></div>
+            <div class="row align-items-end">
+              <div class="col-lg-6">
+                <div class="mil-mb-90">
+                  <span class="mil-suptitle mil-upper mil-up mil-mb-30"
+                    >List of Amenities with a
+                  </span>
+                  <h2 class="mil-upper mil-up">Power Twist</h2>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mil-adaptive-right mil-up mil-mb-90">
+                  <div class="mil-nav-buttons">
+                    <div class="mil-slider-button mil-process-prev">Prev</div>
+                    <div class="mil-slider-button mil-process-next">Next</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-container mil-process-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div
+                        class="mil-process-box mil-icon-box mil-up mil-mb-60"
+                        data-swiper-parallax-duration="400"
+                        data-swiper-parallax="-900"
+                        data-swiper-parallax-scale=".8"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        <div class="mil-icon mil-icon-border mil-mb-30">
+                          <img src="img/icons/11.svg" alt="icon" />
+                        </div>
+                        <h4 class="mil-upper mil-mb-30">The Fortress</h4>
+                        <p>Your kingdom is guarded 24/7</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div
+                        class="mil-process-box mil-icon-box mil-up mil-mb-60"
+                        data-swiper-parallax-duration="500"
+                        data-swiper-parallax="-900"
+                        data-swiper-parallax-scale=".8"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        <div class="mil-icon mil-icon-border mil-mb-30">
+                          <img src="img/icons/11.svg" alt="icon" />
+                        </div>
+                        <h4 class="mil-upper mil-mb-30">The Oasis</h4>
+                        <p>
+                          Your personal slice of paradise, away from the noise
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div
+                        class="mil-process-box mil-icon-box mil-up mil-mb-60"
+                        data-swiper-parallax-duration="600"
+                        data-swiper-parallax="-900"
+                        data-swiper-parallax-scale=".8"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        <div class="mil-icon mil-icon-border mil-mb-30">
+                          <img src="img/icons/11.svg" alt="icon" />
+                        </div>
+                        <h4 class="mil-upper mil-mb-30">The Powerhouse</h4>
+                        <p>
+                          Forge a stronger you in a state of the art fitness
+                          center.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div
+                        class="mil-process-box mil-icon-box mil-up mil-mb-60"
+                        data-swiper-parallax-duration="400"
+                        data-swiper-parallax="-900"
+                        data-swiper-parallax-scale=".8"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        <div class="mil-icon mil-icon-border mil-mb-30">
+                          <img src="img/icons/11.svg" alt="icon" />
+                        </div>
+                        <h4 class="mil-upper mil-mb-30">The Epicenter</h4>
+                        <p>
+                          Host celebrations that become the talk of the town
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="features">
+          <div class="container mil-p-120">
+            <div class="mil-background-grid mil-softened"></div>
+
+            <div class="mil-center">
+              <h2 class="mil-mb-90">
+                The 10 Pillars of Ultimate Power (The "dus ka dum")
+              </h2>
+            </div>
+
+            <!-- filter end -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="mil-portfolio-grid mil-up">
+                  <div class="grid-sizer"></div>
+
+                  <div class="mil-grid-item architecture">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-square-item mil-mb-30"
+                    >
+                      <img src="img/covers/1.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          Uninterrupted panoramic lake views from your home.
+                          <br />A rare luxury
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of View</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item interior">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/2.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          The largest, most generously sized BHKs in all of
+                          Vapi.<br />
+                          Live king size
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of SPACE</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item sustainable">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-square-item mil-mb-30"
+                    >
+                      <img src="img/covers/3.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          A fortress like Grand Entrance with a 24x7
+                          <br />Security Cabin & CCTV
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of SECURITY</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item architecture">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/4.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          A tranquil Landscaped Garden for your <br />exclusive
+                          escape
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of NATURE</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item architecture">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-square-item mil-mb-30"
+                    >
+                      <img src="img/covers/5.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          fully-loaded <br />high-energy Gymnasium
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of FITNESS</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item interior">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/6.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          A grand Multi-purpose Hall for <br />celebrations and
+                          gatherings
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of COMMUNITY</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item sustainable">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-square-item mil-mb-30"
+                    >
+                      <img src="img/covers/7.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          A dynamic and safe Children’s.<br />Play Area
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of PLAY</div>
+                    </a>
+                  </div>
+
+                  <div class="mil-grid-item interior">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/8.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          Specially designed comfortable <br />Seating Zones
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of RELAXATION</div>
+                    </a>
+                  </div>
+                  <div class="mil-grid-item interior">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/8.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          The unwavering promise of Niilkanth's <br />two-decade
+                          legacy
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of TRUST</div>
+                    </a>
+                  </div>
+                  <div class="mil-grid-item interior">
+                    <a
+                      href="project.html"
+                      class="mil-portfolio-item-2 mil-long-item mil-mb-30"
+                    >
+                      <img src="img/covers/8.jpg" alt="cover" />
+                      <div class="mil-project-descr">
+                        <h3 class="mil-upper mil-mb-30">
+                          Full D.G. Backup Power for an <br />uninterrupted life
+                        </h3>
+                      </div>
+                      <div class="mil-category">Power of CONTINUITY</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mil-relative" id="contact">
+          <div class="container mil-p-120-30">
+            <div class="mil-background-grid mil-softened"></div>
+            <div class="row justify-content-between">
+              <div class="col-lg-4">
+                <div class="mil-mb-90">
+                  <h2 class="mil-upper mil-up mil-mb-30">We’d love to talk</h2>
+                  <p class="mil-up mil-mb-30">
+                    Have a question? We’d love to hear from you. Send us a note
+                    to get the conversation started - or click on an office
+                    above and talk to us. Especially about designing something,
+                    or something we’ve designed.
+                  </p>
+                  <div class="mil-divider-lg mil-up mil-mb-30"></div>
+                  <p class="mil-up mil-mb-30">
+                    Interested in joining the team? Browse our current openings.
+                  </p>
+                  <div class="mil-up">
+                    <a href="contact.html" class="mil-link mil-upper"
+                      >Join Us
+                      <span class="mil-arrow"
+                        ><img src="img/icons/1.svg" alt="arrow" /></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <form id="cform" class="mil-mb-90 cform">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div
+                        class="mil-input-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <label class="mil-upper"
+                          ><span>Full Name</span
+                          ><span class="mil-required">*</span></label
+                        >
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Enter Your Name Here"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div
+                        class="mil-input-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <label class="mil-upper"
+                          ><span>Email address</span
+                          ><span class="mil-required">*</span></label
+                        >
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Enter Your Email Here"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div
+                        class="mil-input-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <label class="mil-upper"
+                          ><span>Phone</span
+                          ><span class="mil-required">*</span></label
+                        >
+                        <input
+                          type="tel"
+                          name="tel"
+                          placeholder="Enter Your Phone Here"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div
+                        class="mil-input-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <label class="mil-upper"
+                          ><span>Budget</span
+                          ><span class="mil-required">*</span></label
+                        >
+                        <input
+                          type="text"
+                          name="budget"
+                          placeholder="Enter Your Name Here"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div
+                        class="mil-input-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <label class="mil-upper"
+                          ><span>Message</span
+                          ><span class="mil-required">*</span></label
+                        >
+                        <textarea
+                          name="message"
+                          placeholder="Enter Your Name Here"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div
+                        class="mil-checbox-frame mil-dark-input mil-up mil-mb-30"
+                      >
+                        <input
+                          checked
+                          class="mil-checkbox"
+                          id="checkbox-1"
+                          type="checkbox"
+                          value="value"
+                        />
+                        <label for="checkbox-1" class="mil-text-sm"
+                          >Accept the terms and conditions of personal
+                          data.</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <a
+                        href="#."
+                        onclick="$('#cform').submit(); return false;"
+                        class="mil-button mil-up"
+                        >Send Now</a
+                      >
+                    </div>
+                  </div>
+                </form>
+                <div class="alert-success mil-mb-90" style="display: none">
+                  <h5>Thanks, your message is sent successfully.</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- how we work -->
         <section>
           <div class="container mil-p-90-60">
@@ -363,43 +785,7 @@
             data-value-2="23%"
           />
           <div class="mil-overlay"></div>
-          <div class="container mil-p-120-90">
-            <div class="mil-background-grid"></div>
-            <div class="row align-items-end">
-              <div class="col-lg-8">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="mil-footer-navigation mil-up mil-mb-90">
-                      <nav>
-                        <ul>
-                          <li>
-                            <a href="about.html">About</a>
-                          </li>
 
-                          <li>
-                            <a href="portfolio.html">Projects</a>
-                          </li>
-                          <li>
-                            <a href="contact.html">Contact</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-6 col-xl-3">
-                    <span
-                      class="mil-suptitle mil-light mil-upper mil-up mil-mb-30"
-                      >Wills Point</span
-                    >
-                    <p class="mil-text-sm mil-up mil-light-soft mil-mb-30">
-                      8619 S Wolcott Avenue <br />Floor 202 <br />Chicago, IL
-                      60620 <br />(773) 238 - 7162
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="container-fluid">
             <div class="mil-footer-bottom">
               <p class="mil-light-soft mil-mb-15">
@@ -443,5 +829,89 @@
     <script src="js/plugins/magnific-popup.js"></script>
     <!-- ruizarch js -->
     <script src="js/main.js"></script>
+    <script>
+    
+      document.addEventListener("DOMContentLoaded", function () {
+      
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(
+          ".mil-navigation nav ul li a"
+        );
+
+        function updateActiveNav() {
+          let scrollPosition = window.scrollY + 100;
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (
+              scrollPosition >= sectionTop &&
+              scrollPosition < sectionTop + sectionHeight
+            ) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + sectionId) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
+
+        window.addEventListener("scroll", updateActiveNav);
+
+       
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId.startsWith("#")) {
+              const targetSection = document.querySelector(targetId);
+              if (targetSection) {
+                window.scrollTo({
+                  top: targetSection.offsetTop - 80,
+                  behavior: "smooth",
+                });
+
+               
+                history.pushState(null, null, targetId);
+
+              
+                navLinks.forEach((link) => link.classList.remove("active"));
+                this.classList.add("active");
+              }
+            }
+          });
+        });
+
+     
+        window.addEventListener("popstate", function () {
+          const hash = window.location.hash;
+          if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: "smooth",
+              });
+
+             
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === hash) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          }
+        });
+
+       
+        updateActiveNav();
+      });
+    </script>
   </body>
 </html>
