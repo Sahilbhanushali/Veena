@@ -28,13 +28,13 @@ if ( !empty($_POST) ) {
 
     $mail = new PHPMailer;
 
-    // Configure the PHPMailer instance
-    //$mail->isSMTP();
-    //$mail->Host = 'your_smtp_host'; // Your SMTP Host
-    //$mail->SMTPAuth = true;
-    //$mail->Username = 'your_email_address'; // Your Email Address
-    //$mail->Password = 'your_password'; // Your Email Password
-    //$mail->Port = 465; // SMTP Port
+    
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostinger.com'; // Your SMTP Host
+    $mail->SMTPAuth = true;
+    $mail->Username = 'info@niilkanth.com'; // Your Email Address
+    $mail->Password = 'Niilkanth@123'; // Your Email Password
+    $mail->Port = 465; // SMTP Port
 
     //Recipients
     $mail->From = $from;

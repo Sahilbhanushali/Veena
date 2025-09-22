@@ -46,6 +46,25 @@
         scroll-margin-top: 100px;
       }
     </style>
+
+    <style>
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 5px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.alert-success { color: green; margin-top: 10px; }
+.alert-danger { color: red; margin-top: 10px; }
+</style>
   </head>
 
   <body>
@@ -636,11 +655,7 @@
                     Interested in joining the team? Browse our current openings.
                   </p>
                   <div class="mil-up">
-                    <a href="contact.html" class="mil-link mil-upper"
-                      >Join Us
-                      <span class="mil-arrow"
-                        ><img src="img/icons/1.svg" alt="arrow" /></span
-                    ></a>
+                   
                   </div>
                 </div>
               </div>
@@ -659,6 +674,7 @@
                           type="text"
                           name="name"
                           placeholder="Enter Your Name Here"
+                          required
                         />
                       </div>
                     </div>
@@ -674,6 +690,7 @@
                           type="email"
                           name="email"
                           placeholder="Enter Your Email Here"
+                          required
                         />
                       </div>
                     </div>
@@ -689,6 +706,7 @@
                           type="tel"
                           name="tel"
                           placeholder="Enter Your Phone Here"
+                          required
                         />
                       </div>
                     </div>
@@ -704,6 +722,7 @@
                           type="text"
                           name="budget"
                           placeholder="Enter Your Name Here"
+                          required
                         />
                       </div>
                     </div>
@@ -718,6 +737,7 @@
                         <textarea
                           name="message"
                           placeholder="Enter Your Name Here"
+                          required
                         ></textarea>
                       </div>
                     </div>
@@ -741,16 +761,18 @@
                     <div class="col-lg-12">
                       <a
                         href="#."
-                        onclick="$('#cform').submit(); return false;"
+                       id="sendBtn"
                         class="mil-button mil-up"
                         >Send Now</a
                       >
                     </div>
                   </div>
+                  <div id="form-messages"></div>
+<div id="loader" style="display:none;">Sending...</div>
+<input type="text" name="website" id="website" style="display:none;" tabindex="-1" autocomplete="off">
+
                 </form>
-                <div class="alert-success mil-mb-90" style="display: none">
-                  <h5>Thanks, your message is sent successfully.</h5>
-                </div>
+               
               </div>
             </div>
           </div>

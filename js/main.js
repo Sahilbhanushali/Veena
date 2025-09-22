@@ -552,47 +552,68 @@ $(function () {
     contact form
 
     ***************************/
-    if($('.cform').length) {
-		$('#cform').validate({
-			rules: {
-				name: {
-					required: true
-				},
-				tel: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-                budget: {
-					required: true
-				},
-				message: {
-					required: true
-				}
-			},
-			success: 'valid',
-			submitHandler: function() {
-				$.ajax({
-					url: 'mailer/feedback.php',
-					type: 'post',
-					contentType: 'application/json',
-					 data: JSON.stringify({
-                    name: $("#cform").find('input[name="name"]').val(),
-                    email: $("#cform").find('input[name="email"]').val(),
-                    tel: $("#cform").find('input[name="tel"]').val(),
-                    budget: $("#cform").find('input[name="budget"]').val(),
-                    message: $("#cform").find('textarea[name="message"]').val(),
-                }),
-				
-					success: function(data) {
-						$('#cform').fadeOut();
-						$('.alert-success').delay(1000).fadeIn();
-					}
-				});
-			}
-		});
-	}
+$('#sendBtn').on('click', function(event) {
+  event.preventDefault();
+if ($('#website').val().trim() !== "") {
+  $('#form-messages').html('<div class="alert-danger">Spam detected.</div>');
+  return;
+}
+
+  // Get values
+  const name = $('#cform').find('input[name="name"]').val().trim();
+  const email = $('#cform').find('input[name="email"]').val().trim();
+  const tel = $('#cform').find('input[name="tel"]').val().trim();
+  const budget = $('#cform').find('input[name="budget"]').val().trim();
+  const message = $('#cform').find('textarea[name="message"]').val().trim();
+
+  // Frontend Validation
+  if (!name || !email || !tel || !budget || !message) {
+    $('#form-messages').html('<div class="alert-danger">All fields are required.</div>');
+    return;
+  }
+  if (!/^\d{10,15}$/.test(tel)) {
+    $('#form-messages').html('<div class="alert-danger">Phone must be proper only.</div>');
+    return;
+  }
+  if (!/^\d+$/.test(budget)) {
+    $('#form-messages').html('<div class="alert-danger">Budget must be numbers only.</div>');
+    return;
+  }
+  if (message.length < 10) {
+    $('#form-messages').html('<div class="alert-danger">Message must be at least 10 characters.</div>');
+    return;
+  }
+
+  const formData = { name, email, tel, budget, message };
+
+  // Show loader
+  $('#loader').show();
+  $('#form-messages').empty();
+
+  $.ajax({
+    url: 'http://localhost:5000/send-mail',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(formData),
+    success: function(response) {
+      $('#loader').hide();
+
+      if (response.success) {
+        $('#form-messages').html('<div class="alert-success">'+response.message+'</div>');
+        $('#cform')[0].reset(); 
+      } else {
+        $('#form-messages').html('<div class="alert-danger">'+response.message+'</div>');
+      }
+    },
+    error: function(xhr) {
+      $('#loader').hide();
+      let errorMessage = 'Something went wrong.';
+      if (xhr.responseJSON && xhr.responseJSON.message) {
+        errorMessage = xhr.responseJSON.message;
+      }
+      $('#form-messages').html('<div class="alert-danger">'+errorMessage+'</div>');
+    }
+  });
+});
 
 });
