@@ -591,7 +591,7 @@ if ($('#website').val().trim() !== "") {
   $('#form-messages').empty();
 
   $.ajax({
-    url: 'http://localhost:5000/send-mail',
+    url: 'https://veena-226u.onrender.com/send-mail',
     type: 'POST',
     contentType: 'application/json',
     data: JSON.stringify(formData),
