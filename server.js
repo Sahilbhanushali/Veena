@@ -50,7 +50,7 @@ app.post('/send-mail',limiter,  async (req, res) => {
   });
 
   const mailOptions = {
-    from: `"${name}" <info@niilkanth.com>`,
+    from: `"${name}" <veena@niilkanth.com>`,
     to: process.env.EMAIL_TO,
     subject: `New Contact Form Submission from Veena Site ${name}`,
     text: `

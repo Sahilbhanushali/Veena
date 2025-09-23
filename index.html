@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- bootstrap grid css -->
+    
+    <!-- Critical SEO Meta Tags -->
+    <meta name="description" content="Veena 10 Kaa Dum by Niilkanth - Vapi's most powerful lake-facing homes with premium amenities, spacious designs, and strategic location. Experience luxury living with panoramic lake views.">
+    <meta name="keywords" content="Veena 10 Kaa Dum, Niilkanth Vapi, lake-facing homes Vapi, luxury apartments Vapi, real estate Vapi, residential projects Vapi, 2BHK 3BHK Vapi">
+    <meta name="author" content="Niilkanth">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Veena 10 Kaa Dum | Vapi's Most Powerful Lake-Facing Homes">
+    <meta property="og:description" content="Experience luxury living with panoramic lake views at Veena 10 Kaa Dum by Niilkanth. Vapi's premium residential project with premium amenities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.veena10kaadum.com">
+    <meta property="og:image" content="https://www.veena10kaadum.com/webp/bannner_1920x790.webp">
+    <meta property="og:site_name" content="Veena 10 Kaa Dum">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Veena 10 Kaa Dum | Vapi's Most Powerful Lake-Facing Homes">
+    <meta name="twitter:description" content="Experience luxury living with panoramic lake views at Veena 10 Kaa Dum by Niilkanth.">
+    <meta name="twitter:image" content="https://www.veena10kaadum.com/webp/bannner_1920x790.webp">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Residence",
+      "name": "Veena 10 Kaa Dum",
+      "description": "Vapi's most powerful lake-facing homes with premium amenities and spacious designs",
+      "url": "https://www.veena10kaadum.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vapi",
+        "addressRegion": "Gujarat",
+        "addressCountry": "India"
+      },
+      "numberOfRooms": "2-3",
+      "amenityFeature": [
+        "Lake View",
+        "24/7 Security",
+        "Gymnasium",
+        "Landscaped Garden",
+        "Children's Play Area",
+        "Power Backup"
+      ],
+      "photo": [
+        "https://www.veena10kaadum.com/webp/bannner_1920x790.webp",
+        "https://www.veena10kaadum.com/webp/slide_1_605x605.webp",
+        "https://www.veena10kaadum.com/webp/10_ka_dum_7_605x605.webp"
+      ],
+      "telephone": "+91-98791-00006",
+      "email": "veena@niilkanth.com",
+      "sameAs": [
+        "https://www.facebook.com/niilkanth",
+        "https://www.instagram.com/niilkanth"
+      ]
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.veena10kaadum.com">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="webp/bannner_1920x790.webp" as="image">
+    
+    <!-- DNS Prefetch for External Domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google.com">
+    
+    <!-- Bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css" />
-    <!-- font awesome css -->
+    <!-- Font Awesome css -->
     <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
-    <!-- swiper css -->
+    <!-- Swiper css -->
     <link rel="stylesheet" href="css/plugins/swiper.min.css" />
-    <!-- magnific css -->
+    <!-- Magnific css -->
     <link rel="stylesheet" href="css/plugins/magnific-popup.css" />
-    <!-- ruizarch css -->
+    <!-- Ruizarch css -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- page name -->
-    <title>
-      Veena 10 kaa dum by Niilkanth | Vapi's Most Powerful Lake-Facing Homes
-    </title>
+    
+    <!-- Page Title with Primary Keyword -->
+    <title>Veena 10 Kaa Dum by Niilkanth | Vapi's Most Powerful Lake-Facing Homes</title>
+    
     <style>
       /* Smooth scrolling for navigation */
       html {
@@ -45,29 +120,59 @@
       section {
         scroll-margin-top: 100px;
       }
+      
+      /* Schema markup for hidden content */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+       .spinner {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #3498db;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .alert-success { color: green; margin-top: 10px; }
+      .alert-danger { color: red; margin-top: 10px; }
     </style>
-
-    <style>
-.spinner {
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #3498db;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  animation: spin 1s linear infinite;
-  display: inline-block;
-  margin-right: 5px;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-.alert-success { color: green; margin-top: 10px; }
-.alert-danger { color: red; margin-top: 10px; }
-</style>
   </head>
 
   <body>
+     <nav aria-label="Breadcrumb" class="sr-only">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="https://www.niilkanth.com">
+            <span itemprop="name">Niilkanth</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="https://www.niilkanth.com/projects">
+            <span itemprop="name">Projects</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Veena 10 Kaa Dum</span>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </nav>
     <!-- wrapper -->
     <div class="mil-wrapper">
       <div class="mil-progress-track">
@@ -80,8 +185,8 @@
           <div class="mil-top-panel-content">
             <a href="home-1.html" class="mil-logo">
               <img
-                src="img/logo/logo-light.png"
-                alt="Logo"
+                src="logo_white-01.png"
+                alt="Niilkanth Veena 10 Kaa Dum - Premium Real Estate in Vapi"
                 style="width: 130px"
               />
             </a>
@@ -117,11 +222,11 @@
         <!-- banner -->
         <section class="mil-banner" id="home">
           <img
-            src="img/photo/1.jpg"
+            src="webp/bannner_1920x790.webp"
             class="mil-bg-img mil-scale"
             data-value-1=".4"
             data-value-2="1.4"
-            alt="image"
+            alt="Niilkanth Veena 10 Kaa Dum - Luxury Lake-Facing Apartments in Vapi"
           />
           <div class="mil-overlay"></div>
           <div class="container">
@@ -135,7 +240,7 @@
                     </h1>
                   </div>
                   <a
-                    href="contact.html"
+                    href="#contact"
                     class="mil-button mil-sm"
                     style="margin: 0 0 20px 0"
                     >Register Now</a
@@ -194,9 +299,10 @@
                     width="600"
                     height="450"
                     style="border: 0"
-                    allowfullscreen=""
+                    allowfullscreen="true"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
+                    title="Veena 10 Kaa Dum Location in Vapi, Gujarat"
                   ></iframe>
                 </div>
               </div>
@@ -231,7 +337,7 @@
 
         <!-- services -->
         <section class="mil-soft-bg mil-relative">
-          <img src="img/other/bg.svg" class="mil-bg-img" alt="image" />
+          <img src="img/other/bg.svg" class="mil-bg-img" alt="Veena 10 Kaa Dum Background" />
           <div class="container mil-p-120-90">
             <div class="mil-background-grid mil-softened"></div>
             <div class="row">
@@ -249,13 +355,13 @@
                     <div class="row justify-content-between align-items-center">
                       <div class="col-lg-4 mil-mb-30">
                         <p class="mil-dark mil-up mil-mb-10">Email address</p>
-                        <h4 class="mil-thin mil-up">projects@ruizarch.com</h4>
+                        <h4 class="mil-thin mil-up">veena@niilkanth.com</h4>
                       </div>
                       <div class="col-lg-4 mil-mb-30">
                         <p class="mil-dark mil-up mil-mb-10">
                           Free Consultation
                         </p>
-                        <h4 class="mil-thin mil-up">1 800 847 7978</h4>
+                        <h4 class="mil-thin mil-up">+91 98791 00006</h4>
                       </div>
                       <div class="col-lg-3 mil-mb-30">
                         <a href="#contact" class="mil-button mil-up mil-fw"
@@ -304,8 +410,8 @@
                         >
                           <div class="mil-image-frame">
                             <img
-                              src="img/photo/8.jpg"
-                              alt="Veena 10 Kaa Dum Amenity"
+                              src="webp/slide 1_605x605.webp"
+                              alt="Luxury living room at Veena 10 Kaa Dum Vapi"
                             />
                           </div>
                         </div>
@@ -318,7 +424,7 @@
                         >
                           <div class="mil-image-frame">
                             <img
-                              src="img/photo/7.jpg"
+                              src="webp/slide 2_605x605.webp"
                               alt="Veena 10 Kaa Dum Facility"
                             />
                           </div>
@@ -332,7 +438,7 @@
                         >
                           <div class="mil-image-frame">
                             <img
-                              src="img/photo/1.jpg"
+                              src="webp/slide 3_605x605.webp"
                               alt="Veena 10 Kaa Dum Interior"
                             />
                           </div>
@@ -479,10 +585,10 @@
 
                   <div class="mil-grid-item architecture">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="img/covers/1.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_7_605x605.webp" alt="Niilkanth veena 10 kaa dum view" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Uninterrupted panoramic lake views from your home.
@@ -495,10 +601,10 @@
 
                   <div class="mil-grid-item interior">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/2.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_7_605x393.webp" alt="Niilkanth veena 10 kaa dum space" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           The largest, most generously sized BHKs in all of
@@ -512,10 +618,10 @@
 
                   <div class="mil-grid-item sustainable">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="img/covers/3.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_1_605x605.webp" alt="Niilkanth veena 10 kaa dum Security" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A fortress like Grand Entrance with a 24x7
@@ -528,10 +634,10 @@
 
                   <div class="mil-grid-item architecture">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/4.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum nature" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A tranquil Landscaped Garden for your <br />exclusive
@@ -544,10 +650,10 @@
 
                   <div class="mil-grid-item architecture">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="img/covers/5.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_5_605x605.webp" alt="Niilkanth veena 10 kaa dum Gym" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           fully-loaded <br />high-energy Gymnasium
@@ -559,10 +665,10 @@
 
                   <div class="mil-grid-item interior">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/6.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_6_605x605.webp" alt="Niilkanth veena 10 kaa dum Community" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A grand Multi-purpose Hall for <br />celebrations and
@@ -575,10 +681,10 @@
 
                   <div class="mil-grid-item sustainable">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="img/covers/7.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_2_605x393.webp" alt="Niilkanth veena 10 kaa dum Play" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A dynamic and safe Children’s.<br />Play Area
@@ -590,10 +696,10 @@
 
                   <div class="mil-grid-item interior">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/8.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum Relaxation" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Specially designed comfortable <br />Seating Zones
@@ -604,10 +710,10 @@
                   </div>
                   <div class="mil-grid-item interior">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/8.jpg" alt="cover" />
+                      <img src="webp/slide 3_605x605.webp" alt="Niilkanth veena 10 kaa dum Trust" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           The unwavering promise of Niilkanth's <br />two-decade
@@ -619,10 +725,10 @@
                   </div>
                   <div class="mil-grid-item interior">
                     <a
-                      href="project.html"
+                      href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="img/covers/8.jpg" alt="cover" />
+                      <img src="webp/10_ka_dum_3_605x393.webp" alt="Niilkanth veena 10 kaa dum Continuity" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Full D.G. Backup Power for an <br />uninterrupted life
@@ -645,14 +751,11 @@
                 <div class="mil-mb-90">
                   <h2 class="mil-upper mil-up mil-mb-30">We’d love to talk</h2>
                   <p class="mil-up mil-mb-30">
-                    Have a question? We’d love to hear from you. Send us a note
-                    to get the conversation started - or click on an office
-                    above and talk to us. Especially about designing something,
-                    or something we’ve designed.
+                    Niilkanth welcomes you all to the infinite world of never ending happiness. Get greeted with a bespoke living space with exemplary amenities that will raise your expectation of having a better standard of living at the best price.
                   </p>
                   <div class="mil-divider-lg mil-up mil-mb-30"></div>
                   <p class="mil-up mil-mb-30">
-                    Interested in joining the team? Browse our current openings.
+                    <!-- Interested in joining the team? Browse our current openings. -->
                   </p>
                   <div class="mil-up">
                    
