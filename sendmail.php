@@ -1,15 +1,21 @@
 <?php
+// Enable error reporting for debugging (disable on production)
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/error.log');
+error_reporting(E_ALL);
+
+// Return JSON
 header('Content-Type: application/json');
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
+// PHPMailer
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 $config = require 'config.php';
 
+// Only accept POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     echo json_encode(["success" => false, "message" => "Invalid request method."]);
     exit;
@@ -29,33 +35,25 @@ $budget = htmlspecialchars(trim($_POST["budget"] ?? ''));
 $message = htmlspecialchars(trim($_POST["message"] ?? ''));
 
 // Validation
-if (!$name || !$email || !$tel || !$budget || !$message) {
-    echo json_encode(["success" => false, "message" => "All fields are required."]);
-    exit;
-}
+$errors = [];
+if (!$name) $errors[] = "Name is required.";
+if (!$email) $errors[] = "Email is required.";
+if (!$tel) $errors[] = "Phone is required.";
+if (!$budget) $errors[] = "Budget is required.";
+if (!$message) $errors[] = "Message is required.";
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo json_encode(["success" => false, "message" => "Invalid email address."]);
-    exit;
-}
+if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email address.";
+if ($tel && !preg_match('/^\d{10,15}$/', $tel)) $errors[] = "Phone must be 10-15 digits.";
+if ($budget && !preg_match('/^\d+$/', $budget)) $errors[] = "Budget must be numbers only.";
+if ($message && strlen($message) < 10) $errors[] = "Message must be at least 10 characters.";
 
-if (!preg_match('/^\d{10,15}$/', $tel)) {
-    echo json_encode(["success" => false, "message" => "Phone must be 10-15 digits."]);
-    exit;
-}
-
-if (!preg_match('/^\d+$/', $budget)) {
-    echo json_encode(["success" => false, "message" => "Budget must be numbers only."]);
-    exit;
-}
-
-if (strlen($message) < 10) {
-    echo json_encode(["success" => false, "message" => "Message must be at least 10 characters."]);
+if (!empty($errors)) {
+    echo json_encode(["success" => false, "message" => implode(" ", $errors)]);
     exit;
 }
 
 // Send email
-$mail = new PHPMailer(true);
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
 try {
     $mail->isSMTP();
@@ -63,7 +61,7 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = $config['smtp_user'];
     $mail->Password   = $config['smtp_pass'];
-    $mail->SMTPSecure = 'tls';
+    $mail->SMTPSecure = $config['smtp_secure'] ?? 'tls';
     $mail->Port       = $config['smtp_port'];
 
     $mail->setFrom($config['from_email'], $config['from_name']);
@@ -83,7 +81,18 @@ try {
     $mail->send();
     echo json_encode(["success" => true, "message" => "Message sent successfully!"]);
 
+} catch (PHPMailer\PHPMailer\Exception $e) {
+    // Log full PHPMailer error
+    error_log("PHPMailer Error: " . $e->getMessage());
+    echo json_encode([
+        "success" => false,
+        "message" => "Failed to send message. Check server logs for details."
+    ]);
 } catch (Exception $e) {
-    error_log("Mailer Error: {$mail->ErrorInfo}"); // log for debugging
-    echo json_encode(["success" => false, "message" => "Failed to send message. Please try again later."]);
+    // Log any other error
+    error_log("General Error: " . $e->getMessage());
+    echo json_encode([
+        "success" => false,
+        "message" => "An unexpected error occurred. Check server logs for details."
+    ]);
 }
