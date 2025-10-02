@@ -1,5 +1,5 @@
 <?php
-// Enable error reporting for debugging (disable on production)
+// Enable error reporting for debugging (disable in production)
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
@@ -8,12 +8,10 @@ error_reporting(E_ALL);
 // Return JSON
 header('Content-Type: application/json');
 
-// PHPMailer
-require 'vendor/PHPMailer/src/Exception.php';
-require 'vendor/PHPMailer/src/PHPMailer.php';
-require 'vendor/PHPMailer/src/SMTP.php';
+// Include Composer autoload
+require __DIR__ . '/vendor/autoload.php'; // Make sure this path points to your vendor folder
 
-$config = require 'config.php';
+$config = require __DIR__ . '/config.php';
 
 // Only accept POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -52,7 +50,7 @@ if (!empty($errors)) {
     exit;
 }
 
-// Send email
+// Use PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
 try {
@@ -82,17 +80,15 @@ try {
     echo json_encode(["success" => true, "message" => "Message sent successfully!"]);
 
 } catch (PHPMailer\PHPMailer\Exception $e) {
-    // Log full PHPMailer error
     error_log("PHPMailer Error: " . $e->getMessage());
     echo json_encode([
         "success" => false,
-        "message" => "Failed to send message. Check server logs for details."
+        "message" => "Failed to send message. Check server logs."
     ]);
 } catch (Exception $e) {
-    // Log any other error
     error_log("General Error: " . $e->getMessage());
     echo json_encode([
         "success" => false,
-        "message" => "An unexpected error occurred. Check server logs for details."
+        "message" => "An unexpected error occurred. Check server logs."
     ]);
 }
