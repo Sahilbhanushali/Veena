@@ -45,12 +45,12 @@ app.post("/send-mail", limiter, async (req, res) => {
   }
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.hostinger.com",
+    host: "smtp.resend.com",
     port: 465,
-    secure: true,
+    secure: false,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
+      user: "resend",
+      pass:process.env.RESEND_API_KEY
     },
     tls: { rejectUnauthorized: false }
   });
