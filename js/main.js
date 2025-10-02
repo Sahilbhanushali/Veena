@@ -554,19 +554,18 @@ $(function () {
     ***************************/
 $('#sendBtn').on('click', function(event) {
   event.preventDefault();
-if ($('#website').val().trim() !== "") {
-  $('#form-messages').html('<div class="alert-danger">Spam detected.</div>');
-  return;
-}
 
-  // Get values
+  if ($('#website').val().trim() !== "") {
+    $('#form-messages').html('<div class="alert-danger">Spam detected.</div>');
+    return;
+  }
+
   const name = $('#cform').find('input[name="name"]').val().trim();
   const email = $('#cform').find('input[name="email"]').val().trim();
   const tel = $('#cform').find('input[name="tel"]').val().trim();
   const budget = $('#cform').find('input[name="budget"]').val().trim();
   const message = $('#cform').find('textarea[name="message"]').val().trim();
 
-  // Frontend Validation
   if (!name || !email || !tel || !budget || !message) {
     $('#form-messages').html('<div class="alert-danger">All fields are required.</div>');
     return;
@@ -586,21 +585,18 @@ if ($('#website').val().trim() !== "") {
 
   const formData = { name, email, tel, budget, message };
 
-  // Show loader
   $('#loader').show();
   $('#form-messages').empty();
 
   $.ajax({
     url: 'sendmail.php',
     type: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify(formData),
+    data: formData, // use form-encoded data for PHP
     success: function(response) {
       $('#loader').hide();
-
       if (response.success) {
         $('#form-messages').html('<div class="alert-success">'+response.message+'</div>');
-        $('#cform')[0].reset(); 
+        $('#cform')[0].reset();
       } else {
         $('#form-messages').html('<div class="alert-danger">'+response.message+'</div>');
       }
@@ -615,5 +611,6 @@ if ($('#website').val().trim() !== "") {
     }
   });
 });
+
 
 });
