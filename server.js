@@ -17,10 +17,17 @@ const limiter = rateLimit({
   message: { success: false, message: "Too many requests, please try again later." }
 });
 
+
+app.post("/server-check", (req, res) => {
+  res.json({ success: true, message: "Server is running!" });
+});
+
 app.post("/send-mail", limiter, async (req, res) => {
   if (req.body.website && req.body.website.trim() !== "") {
     return res.status(400).json({ success: false, message: "Spam detected" });
   }
+
+
 
   const { name, email, tel, budget, message } = req.body;
 
