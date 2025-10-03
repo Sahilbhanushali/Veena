@@ -41,7 +41,7 @@ if (!$budget) $errors[] = "Budget is required.";
 if (!$message) $errors[] = "Message is required.";
 
 if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email address.";
-if ($tel && !preg_match('/^\d{10,15}$/', $tel)) $errors[] = "Phone must be 10-15 digits.";
+if ($tel && !preg_match('/^\d{10}$/', $tel)) $errors[] = "Phone must be 10 digits.";
 if ($budget && !preg_match('/^\d+$/', $budget)) $errors[] = "Budget must be numbers only.";
 if ($message && strlen($message) < 10) $errors[] = "Message must be at least 10 characters.";
 
