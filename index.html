@@ -18,12 +18,18 @@
     <meta property="og:url" content="https://www.niilkanthveena.com">
     <meta property="og:image" content="https://www.niilkanthveena.com/webp/bannner_1920x790.webp">
     <meta property="og:site_name" content="Veena 10 Kaa Dum">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:locale:alternate" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Veena 10 Kaa Dum | Vapi's Most Powerful Lake-Facing Homes">
     <meta name="twitter:description" content="Experience luxury living with panoramic lake views at Veena 10 Kaa Dum by Niilkanth.">
     <meta name="twitter:image" content="https://www.niilkanthveena.com/webp/bannner_1920x790.webp">
+    
+    <!-- Geo / Locale Meta -->
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Vapi">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -62,8 +68,77 @@
     }
     </script>
     
+    <!-- Local Business (ApartmentComplex) Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ApartmentComplex",
+      "name": "Niilkanth Veena - Veena 10 Kaa Dum",
+      "url": "https://www.niilkanthveena.com",
+      "telephone": "+91-98791-00006",
+      "email": "veena@niilkanth.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vapi",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 20.34565,
+        "longitude": 72.93416
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      }],
+      "sameAs": [
+        "https://www.facebook.com/niilkanth",
+        "https://www.instagram.com/niilkanth"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Niilkanth Veena located in Vapi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Niilkanth Veena is located in a prime lakeside neighborhood of Vapi, Gujarat with excellent connectivity to schools, hospitals, shopping, and the highway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What apartment options are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spacious 2 and 3 BHK homes designed for premium lake-facing living with modern amenities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a site visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call +91 98791 00006 or email veena@niilkanth.com, or submit the contact form on this page to schedule a visit."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.niilkanthveena.com">
+    <link rel="alternate" hreflang="en-in" href="https://www.niilkanthveena.com">
+    <link rel="alternate" hreflang="x-default" href="https://www.niilkanthveena.com">
     
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
@@ -76,9 +151,15 @@
     <link rel="preload" href="js/main.js" as="script">
     <link rel="preload" href="webp/bannner_1920x790.webp" as="image">
     
-    <!-- DNS Prefetch for External Domains -->
+    <!-- DNS Prefetch & Preconnect for External Domains -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//maps.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
     
     <!-- Bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css" />
@@ -204,6 +285,8 @@
                 src="logo_white-01.png"
                 alt="Niilkanth Veena 10 Kaa Dum - Premium Real Estate in Vapi"
                 style="width: 130px"
+                decoding="async"
+                loading="eager"
               />
             </a>
 
@@ -243,6 +326,8 @@
             data-value-1=".4"
             data-value-2="1.4"
             alt="Niilkanth Veena 10 Kaa Dum - Luxury Lake-Facing Apartments in Vapi"
+            decoding="async"
+            fetchpriority="high"
           />
           <div class="mil-overlay"></div>
           <div class="container">
@@ -318,6 +403,8 @@
           src="niilkanth-logo.webp"
           alt="Niilkanth Aaradhya"
           class="img-fluid rounded shadow-sm"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>
@@ -382,7 +469,7 @@
 
         <!-- services -->
         <section class="mil-soft-bg mil-relative">
-          <img src="img/other/bg.svg" class="mil-bg-img" alt="Veena 10 Kaa Dum Background" />
+          <img src="img/other/bg.svg" class="mil-bg-img" alt="Veena 10 Kaa Dum Background" loading="lazy" decoding="async" />
           <div class="container mil-p-120-90">
             <div class="mil-background-grid mil-softened"></div>
             <div class="row">
@@ -455,6 +542,8 @@
                             <img
                               src="webp/slide 1_605x605.webp"
                               alt="Luxury living room at Veena 10 Kaa Dum Vapi"
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                         </div>
@@ -469,6 +558,8 @@
                             <img
                               src="webp/slide 2_605x605.webp"
                               alt="Veena 10 Kaa Dum Facility"
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                         </div>
@@ -483,6 +574,8 @@
                             <img
                               src="webp/slide 3_605x605.webp"
                               alt="Veena 10 Kaa Dum Interior"
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                         </div>
@@ -683,7 +776,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_7_605x605.webp" alt="Niilkanth veena 10 kaa dum view" />
+                      <img src="webp/10_ka_dum_7_605x605.webp" alt="Niilkanth veena 10 kaa dum view" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Uninterrupted panoramic lake views from your home.
@@ -699,7 +792,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_7_605x393.webp" alt="Niilkanth veena 10 kaa dum space" />
+                      <img src="webp/10_ka_dum_7_605x393.webp" alt="Niilkanth veena 10 kaa dum space" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           The largest, most generously sized BHKs in all of
@@ -716,7 +809,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_1_605x605.webp" alt="Niilkanth veena 10 kaa dum Security" />
+                      <img src="webp/10_ka_dum_1_605x605.webp" alt="Niilkanth veena 10 kaa dum Security" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A fortress like Grand Entrance with a 24x7
@@ -732,7 +825,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum nature" />
+                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum nature" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A tranquil Landscaped Garden for your <br />exclusive
@@ -748,7 +841,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_5_605x605.webp" alt="Niilkanth veena 10 kaa dum Gym" />
+                      <img src="webp/10_ka_dum_5_605x605.webp" alt="Niilkanth veena 10 kaa dum Gym" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           fully-loaded <br />high-energy Gymnasium
@@ -763,7 +856,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_6_605x605.webp" alt="Niilkanth veena 10 kaa dum Community" />
+                      <img src="webp/10_ka_dum_6_605x605.webp" alt="Niilkanth veena 10 kaa dum Community" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A grand Multi-purpose Hall for <br />celebrations and
@@ -779,7 +872,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-square-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_2_605x393.webp" alt="Niilkanth veena 10 kaa dum Play" />
+                      <img src="webp/10_ka_dum_2_605x393.webp" alt="Niilkanth veena 10 kaa dum Play" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           A dynamic and safe Children’s.<br />Play Area
@@ -794,7 +887,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum Relaxation" />
+                      <img src="webp/10_ka_dum_5_605x393.webp" alt="Niilkanth veena 10 kaa dum Relaxation" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Specially designed comfortable <br />Seating Zones
@@ -808,7 +901,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/slide 3_605x605.webp" alt="Niilkanth veena 10 kaa dum Trust" />
+                      <img src="webp/slide 3_605x605.webp" alt="Niilkanth veena 10 kaa dum Trust" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           The unwavering promise of Niilkanth's <br />two-decade
@@ -823,7 +916,7 @@
                       href="#"
                       class="mil-portfolio-item-2 mil-long-item mil-mb-30"
                     >
-                      <img src="webp/10_ka_dum_3_605x393.webp" alt="Niilkanth veena 10 kaa dum Continuity" />
+                      <img src="webp/10_ka_dum_3_605x393.webp" alt="Niilkanth veena 10 kaa dum Continuity" loading="lazy" decoding="async" />
                       <div class="mil-project-descr">
                         <h3 class="mil-upper mil-mb-30">
                           Full D.G. Backup Power for an <br />uninterrupted life
@@ -1001,6 +1094,16 @@
 
           <div class="container-fluid">
             <div class="mil-footer-bottom">
+              <div class="mil-light-soft mil-mb-15" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name">Niilkanth Veena</span> ·
+                <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                  <span itemprop="addressLocality">Vapi</span>,
+                  <span itemprop="addressRegion">Gujarat</span>,
+                  <span itemprop="addressCountry">India</span>
+                </span>
+                · <a href="tel:+919879100006" itemprop="telephone">+91 98791 00006</a>
+                · <a href="mailto:veena@niilkanth.com" itemprop="email">veena@niilkanth.com</a>
+              </div>
               <p class="mil-light-soft mil-mb-15">
                 © <a href="itsmedezino.com">itsmedezino</a> 2025. All rights
                 reserved.
@@ -1019,23 +1122,23 @@
     <!-- wrapper end -->
 
     <!-- jQuery js -->
-    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/jquery.min.js" defer></script>
     <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/plugins/swiper.min.js" defer></script>
     <!-- gsap js -->
-    <script src="js/plugins/gsap.min.js"></script>
+    <script src="js/plugins/gsap.min.js" defer></script>
     <!-- imagesloaded js -->
-    <script src="js/plugins/imagesloaded.pkgd.js"></script>
+    <script src="js/plugins/imagesloaded.pkgd.js" defer></script>
     <!-- isotope js -->
-    <script src="js/plugins/isotope.min.js"></script>
+    <script src="js/plugins/isotope.min.js" defer></script>
     <!-- scroll smoother -->
-    <script src="js/plugins/smooth-scroll.js"></script>
+    <script src="js/plugins/smooth-scroll.js" defer></script>
     <!-- scroll trigger js -->
-    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <script src="js/plugins/ScrollTrigger.min.js" defer></script>
     <!-- magnific js -->
-    <script src="js/plugins/magnific-popup.js"></script>
+    <script src="js/plugins/magnific-popup.js" defer></script>
     <!-- ruizarch js -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
     <script>
     
       document.addEventListener("DOMContentLoaded", function () {
